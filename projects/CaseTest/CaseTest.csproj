@@ -65,6 +65,7 @@
     <Folder Include="Model\" />
     <Folder Include="Data\" />
   </ItemGroup>
+<<<<<<< HEAD
 
 
 
@@ -78,3 +79,6 @@
 
 
 
+=======
+</Project>
+>>>>>>> 2f037f5938849dcb8a6a87513d7b9867244377e0
