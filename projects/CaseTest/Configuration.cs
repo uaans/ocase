@@ -35,10 +35,14 @@ namespace CaseTest
 		static Configuration ()
 		{
 			customFieldNames = new List<string>(new string[] { "FieldOne", "FieldTwo", "FieldThree", "FieldFour" });
-			generateOrganization = true;
+			generateOrganization = false;
 			searchesNumber = 1000;
 			connectionString =
-	          "Server=localhost;Database=oCase;User ID=root;Pooling=false;Allow User Variables=True";
+	          "Server=localhost;" +
+	          "Database=oCase;" +
+	          "User ID=root;" +
+	          "Password=test;" +
+	          "Pooling=false;Allow User Variables=True";
 		}
 	}
 }
