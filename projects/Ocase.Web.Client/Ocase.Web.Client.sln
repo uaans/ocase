@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocase.Web.Client", "Ocase.Web.Client\Ocase.Web.Client.csproj", "{2689DE64-7CA4-4192-9F58-47C43E4C172F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocase.Main", "..\Ocase.Main\Ocase.Main\Ocase.Main.csproj", "{A98EFCE9-558C-454A-9420-75282E7287DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocase.Main.Configuration", "..\Ocase.Main\Ocase.Main.Configuration\Ocase.Main.Configuration.csproj", "{DB06C250-6BDA-4CD7-868B-E96C6EDCC8E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2689DE64-7CA4-4192-9F58-47C43E4C172F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2689DE64-7CA4-4192-9F58-47C43E4C172F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2689DE64-7CA4-4192-9F58-47C43E4C172F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2689DE64-7CA4-4192-9F58-47C43E4C172F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A98EFCE9-558C-454A-9420-75282E7287DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A98EFCE9-558C-454A-9420-75282E7287DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A98EFCE9-558C-454A-9420-75282E7287DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A98EFCE9-558C-454A-9420-75282E7287DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB06C250-6BDA-4CD7-868B-E96C6EDCC8E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB06C250-6BDA-4CD7-868B-E96C6EDCC8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB06C250-6BDA-4CD7-868B-E96C6EDCC8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB06C250-6BDA-4CD7-868B-E96C6EDCC8E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Ocase.Web.Client\Ocase.Web.Client.csproj
+	EndGlobalSection
+EndGlobal
