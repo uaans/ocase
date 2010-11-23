@@ -32,11 +32,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
     <Reference Include="MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\home\rupert\mysql\v2\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
