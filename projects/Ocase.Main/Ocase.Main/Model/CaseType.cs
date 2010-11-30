@@ -1,6 +1,7 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
-using Ocase.Main.Data;
+using Norm;
 
 namespace Ocase.Main.Model
 {
@@ -8,7 +9,7 @@ namespace Ocase.Main.Model
 	{
 		private static List<CaseType> types = new List<CaseType>();
 		
-		public int Id { get; set; }
+		public ObjectId Id { get; set; }
 		public string Name { get; set; }
 		public static List<CaseType> CaseTypes
 		{
@@ -17,7 +18,10 @@ namespace Ocase.Main.Model
 		
 		static CaseType ()
 		{
-			types = new CaseTypeDataProvider().GetAll();
+			using(var db = Mongo.Create(System.Configuration.ConfigurationManager.AppSettings["MongoConnection"]))
+			{
+				types = db.GetCollection<CaseType>().Find().ToList();
+			}
 		}
 		
 		public override string ToString ()

@@ -1,21 +1,19 @@
 using System;
-using Ocase.Main.Data;
+using Norm;
 
 namespace Ocase.Main.Model
 {
 	public class Organization
 	{
-		public int Id { get; set; }
+		public ObjectId Id { get; set; }
 		public string Name { get; set; }
-		
-		public Organization ()
-		{
-			Id = -1;
-		}
 		
 		public void Save()
 		{
-			Id = new OrganizationDataProvider().Save(this);
+			using(var db = Mongo.Create(System.Configuration.ConfigurationManager.AppSettings["MongoConnection"]))
+			{
+				db.GetCollection<Organization>().Save(this);
+			}
 		}
 		
 		public override string ToString ()

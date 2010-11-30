@@ -21,6 +21,7 @@ namespace Ocase.Web.Client
 		protected void Application_Start ()
 		{
 			RegisterRoutes (RouteTable.Routes);
+			Ocase.Main.Model.SequenceNumbers.InitializeMongoCollection(false);
 		}
 	}
 }

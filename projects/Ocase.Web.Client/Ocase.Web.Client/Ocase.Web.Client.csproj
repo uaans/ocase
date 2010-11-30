@@ -52,19 +52,20 @@
     <Folder Include="Content\" />
     <Folder Include="Controllers\" />
     <Folder Include="Scripts\" />
-    <Folder Include="Views\CaseSearch\" />
+    <Folder Include="Views\Case\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
     <Content Include="Web.config" />
     <Content Include="Global.asax" />
-    <Content Include="Views\CaseSearch\Index.aspx" />
+    <Content Include="Views\Case\Create.aspx" />
+    <Content Include="Views\Case\Index.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\CaseSearchController.cs" />
+    <Compile Include="Controllers\CaseController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -76,7 +77,7 @@
     </MonoDevelop>
   </ProjectExtensions>
   <ItemGroup>
-    <ProjectReference Include="..\..\Ocase.Main\Ocase.Main.Data\Ocase.Main.csproj">
+    <ProjectReference Include="..\..\Ocase.Main\Ocase.Main\Ocase.Main.csproj">
       <Project>{A98EFCE9-558C-454A-9420-75282E7287DE}</Project>
       <Name>Ocase.Main</Name>
     </ProjectReference>

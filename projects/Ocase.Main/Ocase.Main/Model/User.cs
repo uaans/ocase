@@ -1,24 +1,27 @@
 using System;
-using Ocase.Main.Data;
+using Norm;
+
 namespace Ocase.Main.Model
 {
 	public class User
 	{
-		public int Id { get; set; }
+		public ObjectId Id { get; set; }
 		public string Name { get; set; }
 		public DateTime CreationDate { get; set; }
 		public DateTime ExpireDate  { get; set; }
 		
 		public User ()
 		{
-			Id = -1;
 			CreationDate = DateTime.Now;
 			ExpireDate = DateTime.MinValue;
 		}
 		
 		public void Save()
 		{
-			Id = new UserDataProvider().Save(this);
+			using(var db = Configuration.CreateMongoConnection())
+			{
+				db.GetCollection<User>().Save(this);
+			}
 		}
 		
 		public override string ToString ()

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Norm;
 
 namespace Ocase.Main
 {
@@ -28,6 +29,11 @@ namespace Ocase.Main
 		public static bool GenerateOrganization 
 		{ 
 			get { return generateOrganization; }
+		}
+		
+		public static IMongo CreateMongoConnection()
+		{
+			return Mongo.Create(System.Configuration.ConfigurationManager.AppSettings["MongoConnection"]);
 		}
 		
 		static Configuration ()

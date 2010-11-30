@@ -16,12 +16,12 @@
 		</tr>
 		<% foreach(var model in Model) { %>
 		<tr>
-			<td><%= model.YearAndSequenceNumber() %></td>
 			<td><%= model.Title %></td>
+			<td><%= model.YearAndSequenceNumber() %></td>
 			<td><%= model.CreationDate.ToString() %></td>
-			<td><%= model.Type.Name %></td>
-			<td><%= model.Responsible.Name %></td>
-			<td><%= model.OrganizationUnit.Name %></td>
+			<td><%if(model.Type != null)%><%= model.Type.Name %></td>
+			<td><%if(model.Responsible != null)%><%= model.Responsible.Name %></td>
+			<td><%if(model.OrganizationUnit != null)%><%= model.OrganizationUnit.Name %></td>
 		</tr>
 		<% } %>
 	</table>
