@@ -32,10 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\usr\lib\mono\gac\MySql.Data\6.3.5.0__c5687fc88969c44d\MySql.Data.dll</HintPath>
-    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="Norm, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <SpecificVersion>False</SpecificVersion>

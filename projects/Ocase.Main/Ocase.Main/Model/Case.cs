@@ -26,7 +26,7 @@ namespace Ocase.Main.Model
 		
 		public static List<Case> GetAll()
 		{
-			using(var db = Mongo.Create(System.Configuration.ConfigurationManager.AppSettings["MongoConnection"]))
+			using(var db = Configuration.CreateMongoConnection())
 			{
 				var cases = db.GetCollection<Case>().Find();
 				return cases.ToList();
@@ -36,7 +36,7 @@ namespace Ocase.Main.Model
 		public void Save()
 		{
 			if(SequenceNumber < 1) SequenceNumber = SequenceNumbers.NextCaseSequenceNumber();
-			using(var db = Mongo.Create(System.Configuration.ConfigurationManager.AppSettings["MongoConnection"]))
+			using(var db = Configuration.CreateMongoConnection())
 			{
 				db.GetCollection<Case>().Save(this);
 			}
